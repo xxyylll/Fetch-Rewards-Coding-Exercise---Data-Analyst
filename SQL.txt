@@ -1,0 +1,1 @@
+﻿Q1 What are the top 5 brands by receipts scanned for most recent month?SELECT COUNT(*) AS count, brandCodeFROM brandsJOIN receiptsON brandCodeWHERE MONTH(dateScanned) = MONTH(getdate())GROUP BY brandCodeORDER BY count DESCLIMIT 5
